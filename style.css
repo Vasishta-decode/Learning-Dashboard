@@ -607,19 +607,23 @@ body{
 }
 
 @media screen and (max-width: 768px) {
-    
-    .top-container .nav{
+    .top-container .nav {
         flex-direction: column;
         gap: 15px;
     }
 
     .top-container .nav .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+    }
+
+    .top-container .nav .right-section {
+        width: 100%;
+        justify-content: space-between;
     }
 
     .top-container .status .items-list {
         flex-direction: column;
+        gap: 15px;
     }
 
     .top-container .status .items-list .item {
@@ -638,6 +642,8 @@ body{
 
     .bottom-container {
         flex-direction: column;
+        padding: 20px;
+        gap: 20px;
     }
 
     .bottom-container .prog-status,
@@ -648,24 +654,23 @@ body{
 
     .bottom-container .upcoming .dates {
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
         padding-bottom: 10px;
     }
 
     .bottom-container .upcoming .dates::-webkit-scrollbar {
-        height: 4px;
+        height: 5px;
     }
 
     .bottom-container .upcoming .dates::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
+        background: #888;
+        border-radius: 10px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .top-container .nav .right-section {
-        flex-direction: column;
-        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .top-container .nav .right-section .profile {
@@ -680,6 +685,59 @@ body{
 
     .bottom-container .prog-status .details .separator {
         display: none;
+    }
+
+    .top-container {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .top-container .status {
+        padding: 15px;
+    }
+
+    .top-container .status .items-list .item {
+        padding: 15px;
+    }
+
+    .bottom-container .popular .listen {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bottom-container .popular .listen button {
+        width: 100%;
+    }
+
+    .bottom-container .upcoming .events .item {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .top-container .nav {
+        padding: 15px;
+    }
+
+    .top-container .nav .right-section > i {
+        padding: 8px;
+    }
+
+    .top-container .nav .right-section .profile .info img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .top-container .nav .right-section .profile .info a,
+    .top-container .nav .right-section .profile .info p {
+        font-size: 12px;
+    }
+
+    .bottom-container .prog-status .header .tabs {
+        gap: 10px;
+    }
+
+    .bottom-container .prog-status .header .tabs a {
+        padding: 5px 10px;
     }
 }
 
